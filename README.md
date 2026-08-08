@@ -1,5 +1,4 @@
-The first change I made was setting the language.
-There were no other issues. 
-To make the bottom divs more readable I made the colors lighter. 
-Previously fixed header hierarchy.
- 
+The first error I corrected was setting the language to english. Changing this allows someone who may need translation services or blind to know that the website is written in English. 
+Making sure each photo has a description, also helps someone who may be blind. I corrected one photo description as it wasn't accurate, likely a copy and paste error from a previous image. 
+Correcting the hierarchy (h1 before h2 specifically) helps me make my website more readable but is also required to have a proper webpage layout. 
+The last thing I corrected was the backcoloring of my DIVs, this helps viewers read the text more easily. I was experiencing a contrast issue when it came to the darker colors with the black text writing.
