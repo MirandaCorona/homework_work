@@ -35,7 +35,21 @@ addItemBtn.addEventListener('click', function () {
     'Attitude of a teenager?',
     'Mouth full of crayons?',
     'Got ahold of flour?',
-    'No diaper, no problem?'
+    'No diaper, no problem?',
+    'Scream because they got what they wanted?',
+    'Hide your keys or other necessities?',
+    'Crashout because the sandwich is squares and not triangles?',
+    'Say with a straight face that there is a brown crown in their diaper?',
+    'Cut their hair while you take a shower?',
+    'Nothing and No one is their best friend?',
+    'Same thing they love today, they hated yesterday?',
+    'Refuse dinner because the plate is not the right color?',
+    'Ask "why" 37946 times in a row?',
+    'Become violently offened by literally anything?',
+    'Bites food and then spits it in your hand',
+    'Make the indoor slide, a water slide.',
+    'Or the complete last thing youu would expect'
+
   ];
 
   const randomItem = chaosItems[Math.floor(Math.random() * chaosItems.length)];
