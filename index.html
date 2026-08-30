@@ -57,11 +57,24 @@
    <div class="Example3">I am so grateful for my motherhood journey, even on its hardest days. Especially on the days where I just feel like giving up, I just remind myself SHE is worth it.</div>
 </article>
 </section>
-<section class="chaos-check">
-  <label for="chaosInput">Toddler mood:</label>
-  <input id="chaosInput" type="text" placeholder="Type here...">
-  <p id="chaosStatus">Status: calm</p>
-</section>
+<div class="interactive-row">
+  <section class="chaos-check">
+    <label for="chaosInput">Toddler mood:</label>
+    <input id="chaosInput" type="text" placeholder="Type here...">
+    <p id="chaosStatus">Status: calm</p>
+  </section>
+
+  <section class="dynamic-list-section">
+    <h2>What chaos is on the list today?</h2>
+    <ul id="chaosList">
+      <li>Playing in dog water?</li>
+      <li>Refusing all meals?</li>
+      <li>Breaking into the paint stash?</li>
+    </ul>
+    <button id="addItemBtn" type="button">Add chaos</button>
+    <button id="removeItemBtn" type="button">Remove last item</button>
+  </section>
+</div>
 
 <section class="reveal">
   <h2>Moments that matter</h2>
