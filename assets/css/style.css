@@ -115,3 +115,9 @@ h1 {
     max-width: calc(25% - 12px);
   }
 }
+.reveal {color: rgb(113, 49, 168);
+  font-family: allura, cursive;
+  font-size: 32px;
+  text-align: center;
+  margin: 24px 16px;
+}
