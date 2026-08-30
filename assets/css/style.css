@@ -121,3 +121,41 @@ h1 {
   text-align: center;
   margin: 24px 16px;
 }
+
+.chaos-check {
+  margin: 24px 16px 40px;
+  padding: 20px;
+  background: #f4eaff;
+  border: 3px solid #b77ae8;
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+.chaos-check label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #4a1d78;
+}
+
+#chaosInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #b77ae8;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#chaosStatus {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #4a1d78;
+  transition: all 0.2s ease;
+}
+
+#chaosStatus.highlight {
+  color: #fff;
+  background-color: #b77ae8;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
