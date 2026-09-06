@@ -7,11 +7,35 @@ const removeItemBtn = document.querySelector('#removeItemBtn');
 const chaosList = document.querySelector('#chaosList');
 const adviceButton = document.querySelector('#adviceButton');
 const adviceResult = document.querySelector('#adviceResult');
+const storyForm = document.querySelector('#storyForm');
+const formStatus = document.querySelector('#formStatus');
+const formFields = [
+  { input: document.querySelector('#name'), error: document.querySelector('#nameError'), message: 'Please enter your name.' },
+  { input: document.querySelector('#email'), error: document.querySelector('#emailError'), message: 'Please enter a valid email address.' },
+  { input: document.querySelector('#toddlerAge'), error: document.querySelector('#toddlerAgeError'), message: 'Please enter an age from 1 to 5.' },
+  { input: document.querySelector('#story'), error: document.querySelector('#storyError'), message: 'Please share at least 10 characters.' }
+];
 const parentingQuotes = [
   'The smallest moments often become the biggest memories.',
   'You are doing important work, even on the messy days.',
   'Children do not need perfect parents; they need present ones.'
 ];
+
+function hasValidFormat(field) {
+  if (field.input.type === 'email') {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.input.value.trim());
+  }
+
+  return field.input.checkValidity();
+}
+
+formFields.forEach(function (field) {
+  field.input.addEventListener('input', function () {
+    field.error.textContent = '';
+    field.input.removeAttribute('aria-invalid');
+    formStatus.textContent = '';
+  });
+});
 
 button.addEventListener('click', function () {
   messageText.textContent = 'Every day through the chaos she is my greatest joy and my biggest motivation. She saved me in ways I hope she never understands.';
@@ -70,6 +94,32 @@ removeItemBtn.addEventListener('click', function () {
   if (lastItem) {
     chaosList.removeChild(lastItem);
   }
+});
+
+storyForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  let formIsValid = true;
+
+  formFields.forEach(function (field) {
+    const fieldIsValid = field.input.value.trim() !== '' && hasValidFormat(field);
+    field.error.textContent = fieldIsValid ? '' : field.message;
+    field.input.setAttribute('aria-invalid', String(!fieldIsValid));
+
+    if (!fieldIsValid) {
+      formIsValid = false;
+    }
+  });
+
+  if (!formIsValid) {
+    formStatus.textContent = 'Please correct the highlighted fields.';
+    return;
+  }
+
+  formStatus.textContent = 'Thank you for sharing your story!';
+  storyForm.reset();
+  formFields.forEach(function (field) {
+    field.input.removeAttribute('aria-invalid');
+  });
 });
 
 adviceButton.addEventListener('click', function () {
