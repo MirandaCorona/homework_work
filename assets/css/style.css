@@ -122,6 +122,107 @@ h1 {
   margin: 24px 16px;
 }
 
+.story-form-section {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border: 3px solid #60b3e7;
+  border-radius: 12px;
+}
+
+.story-form-section h2 {
+  margin-top: 0;
+  color: #1a5d7a;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #1a5d7a;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #9bcce4;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 3px solid #aa52fc;
+  outline-offset: 2px;
+}
+
+.form-field input[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"] {
+  border-color: #b42318;
+}
+
+.field-error {
+  min-height: 1.25em;
+  margin: 4px 0 0;
+  color: #b42318;
+}
+
+#storyForm button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #1a5d7a;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
+#formStatus {
+  min-height: 1.25em;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #7a1a1a;
+}
+
+.advice-section {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #debefb;
+  border: 3px solid #aa52fc;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.advice-section h2 {
+  margin-top: 0;
+  color: #7131a8;
+}
+
+#adviceResult {
+  min-height: 1.5em;
+  color: #4a1d78;
+  font-size: 1.1rem;
+}
+
+#adviceButton {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 6px;
+  background: #7131a8;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
 .interactive-row {
   display: flex;
   flex-wrap: wrap;

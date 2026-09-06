@@ -82,6 +82,44 @@
   <button id="changeButton" type="button">Reveal the truth</button>
 </section>
 
+<section class="story-form-section" aria-labelledby="story-form-title">
+  <h2 id="story-form-title">Share your toddler story</h2>
+  <form id="storyForm" novalidate>
+    <div class="form-field">
+      <label for="name">Your name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+      <p class="field-error" id="nameError"></p>
+    </div>
+
+    <div class="form-field">
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+      <p class="field-error" id="emailError"></p>
+    </div>
+
+    <div class="form-field">
+      <label for="toddlerAge">Toddler's age</label>
+      <input id="toddlerAge" name="toddlerAge" type="number" min="1" max="5" required>
+      <p class="field-error" id="toddlerAgeError"></p>
+    </div>
+
+    <div class="form-field">
+      <label for="story">Your story</label>
+      <textarea id="story" name="story" rows="5" minlength="10" required></textarea>
+      <p class="field-error" id="storyError"></p>
+    </div>
+
+    <button type="submit">Share story</button>
+    <p id="formStatus" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<section class="advice-section" aria-labelledby="advice-title">
+  <h2 id="advice-title">A quote from me to you</h2>
+  <p id="adviceResult" role="status" aria-live="polite">Everyone needs a good quote every now and then.</p>
+  <button id="adviceButton" type="button">Get encouragement</button>
+</section>
+
 <script src="assets/scripts/script.js"></script>
 </body>
 

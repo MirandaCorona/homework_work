@@ -5,6 +5,13 @@ const chaosStatus = document.querySelector('#chaosStatus');
 const addItemBtn = document.querySelector('#addItemBtn');
 const removeItemBtn = document.querySelector('#removeItemBtn');
 const chaosList = document.querySelector('#chaosList');
+const adviceButton = document.querySelector('#adviceButton');
+const adviceResult = document.querySelector('#adviceResult');
+const parentingQuotes = [
+  'The smallest moments often become the biggest memories.',
+  'You are doing important work, even on the messy days.',
+  'Children do not need perfect parents; they need present ones.'
+];
 
 button.addEventListener('click', function () {
   messageText.textContent = 'Every day through the chaos she is my greatest joy and my biggest motivation. She saved me in ways I hope she never understands.';
@@ -64,3 +71,24 @@ removeItemBtn.addEventListener('click', function () {
     chaosList.removeChild(lastItem);
   }
 });
+
+adviceButton.addEventListener('click', function () {
+  adviceResult.textContent = 'Loading encouragement...';
+
+  fetch('https://zenquotes.io/api/random')
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error('The quote service is unavailable.');
+      }
+
+      return response.json();
+    })
+    .then(function (data) {
+      adviceResult.textContent = data[0].q + ' - ' + data[0].a;
+    })
+    .catch(function () {
+      const randomQuote = parentingQuotes[Math.floor(Math.random() * parentingQuotes.length)];
+      adviceResult.textContent = randomQuote;
+    });
+});
+
